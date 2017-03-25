@@ -1,0 +1,9 @@
+version: '2'
+services:
+  example1:
+    build: ./node
+    command: api-mock /var/app/doc/example.md --port 3333
+    ports:
+      - "3000:3333"
+    volumes:
+      - /var/app/doc:/var/app/doc

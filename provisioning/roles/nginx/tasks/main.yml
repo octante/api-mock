@@ -1,0 +1,12 @@
+---
+
+- name: Install nginx
+  apt:
+    name: nginx
+    state: present
+
+- name: Copy nginx virtualhosts
+  copy:
+    src: ../templates/virtualhosts.j2
+    dest: /etc/nginx/sites-enabled
+  notify: restart nginx

@@ -1,0 +1,8 @@
+---
+
+- hosts: apimock
+  gather_facts: yes
+
+  roles:
+    - docker
+    - nginx
